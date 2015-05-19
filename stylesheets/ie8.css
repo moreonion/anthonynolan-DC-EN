@@ -1,0 +1,22 @@
+/* list without icons -> images too big */
+ol.icon-list li {
+  padding-left: 30px;
+}
+ol.icon-list li:before {
+  background: none;
+  padding-top: 10px;
+  padding-left: 0;
+}
+ol.icon-list li:first-child:before {
+  padding-left: 0;
+}
+
+/* counter needs no mask -> no border-radius */
+.pgbar-thermometer .t_body:after {
+  background: none;
+}
+
+/* media queries */
+/*
+/* TODO
+ */
