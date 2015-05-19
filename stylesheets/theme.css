@@ -867,6 +867,7 @@ ol.icon-list h4 {
   -webkit-border-radius: 1.25em 0 0 1.25em;
   border-radius: 1.25em 0 0 1.25em;
 }
+.pgbar-thermometer .t_body:before,
 .pgbar-thermometer .t_body:after {
   content: "";
   background: url('../images/counter_end.png') no-repeat transparent;
@@ -875,6 +876,14 @@ ol.icon-list h4 {
   height: 2.5em;
   position: absolute;
   top: 0;
+}
+.pgbar-thermometer .t_body:before {
+  left: 0;
+  -webkit-transform: scaleX(-1);
+  -ms-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+.pgbar-thermometer .t_body:after {
   right: 0;
 }
 .pgbar-thermometer .t_body .t_current {

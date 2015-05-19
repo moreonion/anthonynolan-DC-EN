@@ -12,6 +12,7 @@ ol.icon-list li:first-child:before {
 }
 
 /* counter needs no mask -> no border-radius */
+.pgbar-thermometer .t_body:before,
 .pgbar-thermometer .t_body:after {
   background: none;
 }
