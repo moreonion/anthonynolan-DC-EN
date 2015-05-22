@@ -31,6 +31,12 @@ $(window).load(function(){
       self.closest('.eaFormField').addClass('validationError');
     }
   });
+  // enable Picker and Selector
+  // see http://www.benplum.com/formstone/
+  if (typeof $.fn.picker == 'function') {
+    $('input[type=radio], input[type=checkbox]').picker();
+  }
+
 
   // change labels to placeholders if they are supported
   // and mark that we did so by setting a class on the body

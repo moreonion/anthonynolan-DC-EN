@@ -1115,6 +1115,9 @@ input[type="checkbox"] {
 .picker.picker-checkbox .picker-handle {
   margin-top: 1px;
 }
+.picker.picker-checkbox.checked .picker-flag {
+  background: #ffffff url(../images/jquery.fs.picker-icon.png) no-repeat scroll center center;
+}
 #Opt_InDiv {
   max-width: 30em;
   margin-left: auto;
