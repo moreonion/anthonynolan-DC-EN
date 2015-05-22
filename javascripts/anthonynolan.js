@@ -4,6 +4,15 @@ $(window).load(function(){
   $('.eaSubmitResetButtonGroup').appendTo($('.eaFormField').last().parent());
   $('body').addClass('twocolumn');
 
+  // hacky
+  // EN buts &nbsp; after the .eaQuestionCheckbox (for whatever reason)
+  // and these need to be deleted for css styling (otherwise some myterious
+  // "margin" appears at the bottom)
+  var checkbox = $('.eaQuestionCheckbox');
+  var parent = checkbox.parent();
+  parent.html('');
+  parent.html(checkbox);
+
   // move validation icon next to label
   // and the error message below the label
   $('.eaErrorMessage').each(function() {
