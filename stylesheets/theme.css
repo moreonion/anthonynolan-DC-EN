@@ -687,6 +687,9 @@ h2 strong,
 .intro p strong {
   color: #899c1c;
 }
+.intro .intro-narrow {
+  max-width: 36em;
+}
 h3 {
   font-size: 1.14285714em;
   font-size: 1.14285714rem;
