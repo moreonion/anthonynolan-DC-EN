@@ -809,6 +809,7 @@ h6 {
 @media screen and (min-width: 1150px) {
   #main {
     width: 60%;
+    padding: 0 5% 0 1%;
   }
 }
 /* ---------- list with icons --------------------------------------- */
