@@ -870,6 +870,7 @@ ol.icon-list h4 {
   height: 2.5em;
   -webkit-border-radius: 1.25em 0 0 1.25em;
   border-radius: 1.25em 0 0 1.25em;
+  min-width: 16px;
 }
 .pgbar-thermometer .t_body:before,
 .pgbar-thermometer .t_body:after {
