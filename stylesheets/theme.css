@@ -734,6 +734,10 @@ h6 {
   color: #000000;
 }
 /* ---------- videos ------------------------------------------------ */
+.video-wrapper {
+  max-width: 420px;
+  margin-bottom: 1.5em;
+}
 .video,
 .youtube,
 .vimeo {
