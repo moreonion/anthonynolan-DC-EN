@@ -81,4 +81,27 @@ $(window).load(function(){
     service: 'EaEmailAOTarget',
     targetDataColumn: 'participatingSupporters'
   });
+
+  // get the XML from the data service
+  // BEWARE: you have to prevent a cross-origin request because getting XML
+  // from a server which does not send any Accept-* headers will not work
+  // accross origins
+  //
+  // then filter the XML document by the selected constiuency to get the needed
+  // data
+  var contacts = $('#select_contacts_containerDiv .eaContactOrgContainer');
+  var referenceResult = "";
+  var dataServiceUrl = '/ea-dataservice/data.service?service=EaReferenceData&token=5492e5df-ba39-41e6-b76c-768212a7bf38&referenceDataName=TEST%20MORE%20ONION';
+  if (contacts.length > 0) {
+    $.ajax({
+      method: 'GET',
+      url: dataServiceUrl,
+      dataType: 'xml',
+      success: function (data, status, jqxhr) {
+        var constituency = $.trim(contacts.first().text());
+        referenceResult = $(data).find("[name=organization]").filter(function() {return $(this).text() == constituency} ).parent().find("[name=COLUMN3]").text();
+        $('.reference-data-container').text(referenceResult);
+      }
+    });
+  }
 });
