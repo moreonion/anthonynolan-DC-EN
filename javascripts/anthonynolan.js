@@ -99,10 +99,11 @@ $(window).load(function(){
       dataType: 'xml',
       success: function (data, status, jqxhr) {
         var constituency = $.trim(contacts.first().text());
-        var referenceResult1 = $(data).find("[name=organization]").filter(function() {return $(this).text() == constituency} ).parent().find("[name=COLUMN1]").text();
-        var referenceResult2 = $(data).find("[name=organization]").filter(function() {return $(this).text() == constituency} ).parent().find("[name=COLUMN2]").text();
-        var referenceResult3 = $(data).find("[name=organization]").filter(function() {return $(this).text() == constituency} ).parent().find("[name=COLUMN3]").text();
-        var referenceResult4 = $(data).find("[name=organization]").filter(function() {return $(this).text() == constituency} ).parent().find("[name=COLUMN4]").text();
+        var data = $(data).find("[name=organization]").filter(function() {return $(this).text() == constituency} ).parent();
+        var referenceResult1 = data.find("[name=COLUMN1]").text();
+        var referenceResult2 = data.find("[name=COLUMN2]").text();
+        var referenceResult3 = data.find("[name=COLUMN3]").text();
+        var referenceResult4 = data.find("[name=COLUMN4]").text();
         $('.reference-data-container.column1').text(referenceResult1);
         $('.reference-data-container.column2').text(referenceResult2);
         $('.reference-data-container.column3').text(referenceResult3);
