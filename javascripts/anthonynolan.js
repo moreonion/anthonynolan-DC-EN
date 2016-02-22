@@ -91,7 +91,7 @@ $(window).load(function(){
   // data
   var contacts = $('#select_contacts_containerDiv .eaContactOrgContainer');
   var referenceResult = "";
-  var dataServiceUrl = '/ea-dataservice/data.service?service=EaReferenceData&token=5492e5df-ba39-41e6-b76c-768212a7bf38&referenceDataName=TEST%20MORE%20ONION';
+  var dataServiceUrl = '/ea-dataservice/data.service?service=EaReferenceData&token=5492e5df-ba39-41e6-b76c-768212a7bf38&referenceDataName=Donor%20numbers';
   if (contacts.length > 0) {
     $.ajax({
       method: 'GET',
@@ -99,8 +99,14 @@ $(window).load(function(){
       dataType: 'xml',
       success: function (data, status, jqxhr) {
         var constituency = $.trim(contacts.first().text());
-        referenceResult = $(data).find("[name=organization]").filter(function() {return $(this).text() == constituency} ).parent().find("[name=COLUMN3]").text();
-        $('.reference-data-container').text(referenceResult);
+        var referenceResult1 = $(data).find("[name=organization]").filter(function() {return $(this).text() == constituency} ).parent().find("[name=COLUMN1]").text();
+        var referenceResult2 = $(data).find("[name=organization]").filter(function() {return $(this).text() == constituency} ).parent().find("[name=COLUMN2]").text();
+        var referenceResult3 = $(data).find("[name=organization]").filter(function() {return $(this).text() == constituency} ).parent().find("[name=COLUMN3]").text();
+        var referenceResult4 = $(data).find("[name=organization]").filter(function() {return $(this).text() == constituency} ).parent().find("[name=COLUMN4]").text();
+        $('.reference-data-container.column1').text(referenceResult1);
+        $('.reference-data-container.column2').text(referenceResult2);
+        $('.reference-data-container.column3').text(referenceResult3);
+        $('.reference-data-container.column4').text(referenceResult4);
       }
     });
   }
