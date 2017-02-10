@@ -1,7 +1,7 @@
 $(window).load(function(){
   // two column layout
   sortTwoColumn();
-  $('.eaSubmitResetButtonGroup').appendTo($('.eaFormField').last().parent());
+  $('.eaSubmitResetButtonGroup').appendTo($('.eaFormField, [class$=FormFieldContainer]').last().parent());
   $('body').addClass('twocolumn');
 
   // hacky
