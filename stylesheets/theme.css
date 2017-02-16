@@ -950,6 +950,7 @@ ol.icon-list h4 {
 }
 .secondtransplant #header h1 {
   color: #fff;
+  background-color: transparent;
 }
 .secondtransplant #header .inner {
   background-color: transparent;
