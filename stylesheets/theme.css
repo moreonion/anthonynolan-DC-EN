@@ -948,6 +948,12 @@ ol.icon-list h4 {
 .secondtransplant #header {
   background: url('../images/secondtransplant_background.jpg') #222;
 }
+.secondtransplant #header h1 {
+  color: #fff;
+}
+.secondtransplant #header .inner {
+  background-color: transparent;
+}
 /* ==================================================================
  * form styling
  * ================================================================== */
