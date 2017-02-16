@@ -944,6 +944,10 @@ ol.icon-list h4 {
   margin-bottom: 1.90909091em;
   margin-top: 0.75em;
 }
+/* ---------- campaign specific ------------------------------------- */
+.secondtransplant #header {
+  background: url('../images/secondtransplant_background.jpg') #222;
+}
 /* ==================================================================
  * form styling
  * ================================================================== */
